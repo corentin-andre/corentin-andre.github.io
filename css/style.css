@@ -11,32 +11,34 @@ body, html {
     font-family: Arial, sans-serif;
     color: #333;
     background: #f4f4f4;
+    overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
 .background-image {
-    position: fixed;
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('img/MG_7225-2.jpg') no-repeat center center/cover;
-    z-index: -1;
+    background: url('https://corentinandreingeson.wordpress.com/wp-content/uploads/2021/08/mg_7225-3.jpg') no-repeat center center/cover;
+    z-index: -1; /* Derrière tout le contenu */
 }
 
 .content-wrapper {
+    position: relative;
     margin: 0 auto;
-    max-width: 800px;
-    background: white;
+    max-width: 1000px; /* Largeur maximale de la bande de texte */
+    background-color: white;
+    padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+    z-index: 1;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background: #f9f9f9;
-    border-bottom: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.8); /* Fond transparent pour laisser apparaître un peu l'image */
+    border-radius: 10px;
 }
 
 header h1 {
