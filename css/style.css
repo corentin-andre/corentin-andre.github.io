@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 16px; /* 1rem = 16 pixels */
+    font-size: 16px; /* Par défaut 1rem = 16 pixels */
 }
 
 /* styles.css */
@@ -36,9 +36,10 @@ header {
     position: relative;
     text-align: center;
     padding: 1.8rem;
-    background: rgba(255, 255, 255, 0); /* Fond transparent */
+    background: rgba(188, 255, 247, 0.106); /* Fond transparent */
     border-top: solid 0.1875rem black;
     border-bottom: solid 0.1875rem black;
+    border-radius: 0.1875rem;
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem; /* Espace sous l'en-tête pour ne pas chevaucher le content-wrapper */
@@ -66,13 +67,14 @@ header .subtitle {
     min-height: 100vh; /* Le conteneur prend au moins toute la hauteur de la fenêtre */
 }
 
-.content-wrapper {
+.bio-wrapper {
     position: relative;
     margin: 0 auto;
     margin-top: 0; /* Séparation nette entre le content-wrapper et l'entête */
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3125rem;
     max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 1rem;
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
     z-index: 1;
@@ -83,46 +85,192 @@ main {
     padding: 1rem;
 }
 
+main h1 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #222;
+}
+
+main h2 {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+}
+
+main h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #222;
+}
+
+main hr {
+    border: none;
+    border-top: 0.175rem solid rgba(96, 174, 178, 0.188);
+    border-radius: 0.3175rem;
+    margin: 0.8rem 0;
+    z-index: 2;
+}
+
+main .introduction a {
+    color: rgb(74, 124, 132);
+    text-decoration: none;
+}
+
+main .introduction a:hover {
+    text-decoration: underline;
+}
+
+main .about a {
+    color: rgb(96, 174, 178);
+    text-decoration: none;
+}
+
+main .about a:hover {
+    text-decoration: underline;
+}
 .introduction {
     margin-bottom: 1rem;
     padding: 0.3125rem;
     font-size: 1.15rem;
+    color: #333;
 }
 
 .about {
     margin-bottom: 0.625rem;
     font-size: 1rem;
+    color: #333;
     line-height: 1.2rem;
     text-align: justify;
     text-align-last: left;
     
 }
 
-.services p {
+.services {
+    margin-bottom: 0.625rem;
     padding: 0.3125rem;
-    font-size: 1.15rem;
-    line-height: normal;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.2rem;
+    text-align: justify;
+    text-align-last: left;
+    
 }
 
-.services p br {
-    line-height: 1.5rem;
+.portfolio-header{
+    position: relative;
+    text-align: center;
+    padding: 1.8rem;
+    background: rgba(188, 255, 247, 0.106); /* Fond transparent */
+    border-top: solid 0.1875rem black;
+    border-bottom: solid 0.1875rem black;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.1875rem;
+    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
+    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0);
+    z-index: 2; /* Plus haut que le content-wrapper */
 }
 
-hr {
-    border: 0;
-    height: 0.0625;
-    background: #ddd;
-    margin: 0.8rem 0;
+.portfolio-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #222;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: underline;
+.portfolio-wrapper {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0; /* Séparation nette entre le content-wrapper et l'entête */
+    margin-bottom: 2rem;
+    border-radius: 0.3125rem;
+    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    flex: 1; /* Étire le contenu pour remplir l'espace disponible */
 }
 
-a:hover {
-    text-decoration: underline;
+.portfolio {
+    margin-bottom: 0.625rem;
+    padding: 0.3125rem;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.2rem;
+    text-align: justify;
+    text-align-last: left;
 }
+
+.video-edgerunner-container {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding-bottom: 56.25%; /* Rapport 16:9 (hauteur / largeur) */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-edgerunner-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-texte-section {
+    display: flex; /* Permet de placer les éléments côte à côte */
+    align-items: center; /* Aligne verticalement l'image et le texte */
+    gap: 1rem; /* Espace entre l'image et le texte */
+    padding: 0.5rem;
+    max-width: 36.25rem; /* Largeur maximale de la section */
+    margin: 0 auto; /* Centre la section sur la page */
+}
+
+.image-container {
+    flex: 1; /* L'image prend 1 part d'espace disponible */
+}
+
+.image-container img {
+    max-width: 100%; /* L'image s'ajuste à la largeur de son conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    border-radius: 0.3175rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.image-container img:hover {
+    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.text-container {
+    display: flex; /* Active Flexbox pour centrer le contenu */
+    flex-direction: column; /* Empile le texte verticalement */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Centre le texte dans son espace */
+    text-align-last: center;
+    flex: 1; /* Le texte prend 1 part d'espace disponible */
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.text-container h2 {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    font-size: 1.3rem;
+    color: #222;
+}
+
 
 footer {
     text-align: center;
