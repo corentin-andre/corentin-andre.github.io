@@ -4,73 +4,120 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 16px; /* 1rem = 16 pixels */
+}
+
 /* styles.css */
-body, html {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    font-size: 1rem;
     color: #333;
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0); /* Transparent pour laisser apparaître l’image */
     overflow-x: hidden; /* Empêche le scroll horizontal */
+    height: 100%; /* Assure que le fond couvre toute la hauteur */
 }
 
 .background-image {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://i.ibb.co/4PKrtp1/MG-7225-3.jpg') no-repeat center center/cover;
+    background: url('https://i.ibb.co/4PKrtp1/MG-7225-3.jpg') no-repeat center center;
+    background-size: cover; /* Assure que l'image couvre tout l'écran */
     z-index: -1; /* Derrière tout le contenu */
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 1.8rem;
+    background: rgba(255, 255, 255, 0); /* Fond transparent */
+    border-top: solid 0.1875rem black;
+    border-bottom: solid 0.1875rem black;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Espace sous l'en-tête pour ne pas chevaucher le content-wrapper */
+    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
+    z-index: 2; /* Plus haut que le content-wrapper */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #222;
+}
+
+header .subtitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 0.3125rem;
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Le conteneur prend au moins toute la hauteur de la fenêtre */
 }
 
 .content-wrapper {
     position: relative;
     margin: 0 auto;
-    max-width: 580px; /* Largeur maximale de la bande de texte */
+    margin-top: 0; /* Séparation nette entre le content-wrapper et l'entête */
+    margin-bottom: 2rem;
+    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
     background-color: white;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
     z-index: 1;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0); /* Fond transparent pour laisser apparaître un peu l'image */
-    border-radius: 10px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #222;
-}
-
-header .subtitle {
-    font-size: 14px;
-    color: #555;
-    margin-top: 10px;
+    flex: 1; /* Étire le contenu pour remplir l'espace disponible */
 }
 
 main {
-    padding: 20px;
+    padding: 1rem;
 }
 
-.introduction, .about, .services {
-    margin-bottom: 20px;
+.introduction {
+    margin-bottom: 1rem;
+    padding: 0.3125rem;
+    font-size: 1.15rem;
+}
+
+.about {
+    margin-bottom: 0.625rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    text-align: justify;
+    text-align-last: left;
+    
+}
+
+.services p {
+    padding: 0.3125rem;
+    font-size: 1.15rem;
+    line-height: normal;
+}
+
+.services p br {
+    line-height: 1.5rem;
 }
 
 hr {
     border: 0;
-    height: 1px;
+    height: 0.0625;
     background: #ddd;
-    margin: 20px 0;
+    margin: 0.8rem 0;
 }
 
 a {
     color: #007BFF;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -79,31 +126,21 @@ a:hover {
 
 footer {
     text-align: center;
-    padding: 10px;
     background: #333;
     color: #fff;
-    margin-top: 20px;
+    padding: 0.625rem;
+    font-size: 0.875rem;
 }
 
 /* === Responsivité (Media Queries) === */
 @media (max-width: 768px) {
-    /* Styles spécifiques pour les écrans de largeur ≤ 768px */
-    body {
-        padding: 0 10px;
-    }
-
-    footer {
-        font-size: 14px; /* Réduit la taille du texte du footer */
+    html {
+    font-size: 14px; /* Par défaut 1rem = 16 pixels */
     }
 }
 
 @media (max-width: 480px) {
-    /* Styles spécifiques pour les écrans de largeur ≤ 480px */
-    body {
-        font-size: 14px;
-    }
-
-    main h1 {
-        font-size: 20px; /* Adapte la taille du titre principal */
-    }
+    html {
+    font-size: 10px; /* Par défaut 1rem = 16 pixels */
+     }
 }
