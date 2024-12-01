@@ -43,7 +43,7 @@ header {
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem; /* Espace sous l'en-tête pour ne pas chevaucher le content-wrapper */
-    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
+    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
     z-index: 2; /* Plus haut que le content-wrapper */
 }
 
@@ -73,7 +73,7 @@ header .subtitle {
     margin-top: 0; /* Séparation nette entre le content-wrapper et l'entête */
     margin-bottom: 1rem;
     border-radius: 0.3125rem;
-    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
+    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
@@ -174,7 +174,7 @@ main .about a:hover {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.1875rem;
-    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
+    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0);
     z-index: 2; /* Plus haut que le content-wrapper */
 }
@@ -192,7 +192,7 @@ main .about a:hover {
     margin-top: 0; /* Séparation nette entre le content-wrapper et l'entête */
     margin-bottom: 2rem;
     border-radius: 0.3125rem;
-    max-width: 36.25rem; /* Largeur maximale de la bande de texte. Par défaut 36.25rem = 16x36.25 = 580px */
+    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
@@ -232,7 +232,7 @@ main .about a:hover {
     align-items: center; /* Aligne verticalement l'image et le texte */
     gap: 1rem; /* Espace entre l'image et le texte */
     padding: 0.5rem;
-    max-width: 36.25rem; /* Largeur maximale de la section */
+    max-width: 40rem; /* Largeur maximale de la section */
     margin: 0 auto; /* Centre la section sur la page */
 }
 
