@@ -43,7 +43,7 @@ header {
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem; /* Espace sous l'en-tête pour ne pas chevaucher le content-wrapper */
-    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
+    max-width: 45rem; /* Largeur maximale de la bande de texte. Par défaut 45rem = 16x45 = 720px */
     z-index: 2; /* Plus haut que le content-wrapper */
 }
 
@@ -61,6 +61,22 @@ header .subtitle {
     margin-top: 0.3125rem;
 }
 
+.language-switcher {
+    position: absolute; /* Place le sélecteur indépendamment du flux normal */
+    right: -4.5rem; /* Ajuste la distance depuis le bord droit */
+    top: 6.1rem; /* Centre verticalement par rapport au conteneur */
+}
+
+.language-switcher a {
+    margin: 0 0.3125rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+}
+
+.language-switcher a:hover {
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(77, 172, 182, 0.63)
+}
+
 .site-wrapper {
     display: flex;
     flex-direction: column;
@@ -73,7 +89,7 @@ header .subtitle {
     margin-top: 0; /* Séparation nette entre le content-wrapper et l'entête */
     margin-bottom: 1rem;
     border-radius: 0.3125rem;
-    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
+    max-width: 45rem; /* Largeur maximale de la bande de texte. Par défaut 45rem = 16x45 = 720px */
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
@@ -174,7 +190,7 @@ main .about a:hover {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.1875rem;
-    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
+    max-width: 45rem; /* Largeur maximale de la bande de texte. Par défaut 45rem = 16x45 = 720px */
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0);
     z-index: 2; /* Plus haut que le content-wrapper */
 }
@@ -192,7 +208,7 @@ main .about a:hover {
     margin-top: 0; /* Séparation nette entre le content-wrapper et l'entête */
     margin-bottom: 2rem;
     border-radius: 0.3125rem;
-    max-width: 40rem; /* Largeur maximale de la bande de texte. Par défaut 40rem = 16x40 = 640px */
+    max-width: 45rem; /* Largeur maximale de la bande de texte. Par défaut 45rem = 16x45 = 720px */
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
@@ -210,7 +226,7 @@ main .about a:hover {
     text-align-last: left;
 }
 
-.video-edgerunner-container {
+.video-container {
     position: relative;
     margin-bottom: 1rem;
     width: 100%;
@@ -219,7 +235,7 @@ main .about a:hover {
     overflow: hidden;
 }
 
-.video-edgerunner-container iframe {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -232,7 +248,7 @@ main .about a:hover {
     align-items: center; /* Aligne verticalement l'image et le texte */
     gap: 1rem; /* Espace entre l'image et le texte */
     padding: 0.5rem;
-    max-width: 40rem; /* Largeur maximale de la section */
+    max-width: 45rem; /* Largeur maximale de la section */
     margin: 0 auto; /* Centre la section sur la page */
 }
 
