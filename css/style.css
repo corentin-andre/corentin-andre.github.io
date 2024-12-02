@@ -27,7 +27,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://i.ibb.co/4PKrtp1/MG-7225-3.jpg') no-repeat center center;
+    background: url('img/MG-7225-3.jpg') no-repeat center center;
     background-size: cover; /* Assure que l'image couvre tout l'écran */
     z-index: -1; /* Derrière tout le contenu */
 }
@@ -221,9 +221,27 @@ main .about a:hover {
     padding: 0.3125rem;
     font-size: 1rem;
     color: #333;
-    line-height: 1.2rem;
+    line-height: 1rem;
     text-align: justify;
-    text-align-last: left;
+}
+
+.portfolio h1 {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 4rem;
+}
+
+.portfolio h3 {
+    margin: 0.625rem;
+    padding: 0.3125rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+    line-height: 1.2rem;
 }
 
 .video-container {
