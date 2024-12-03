@@ -63,9 +63,9 @@ header .subtitle {
 }
 
 .language-switcher {
-    position: absolute; /* Place le sélecteur indépendamment du flux normal */
-    right: -4.5rem; /* Ajuste la distance depuis le bord droit */
-    top: 6.1rem; /* Centre verticalement par rapport au conteneur */
+    position: relative; /* Place le sélecteur indépendamment du flux normal */
+    right: 0rem; /* Ajuste la distance depuis le bord droit */
+    top: 7.25rem; /* Centre verticalement par rapport au conteneur */
 }
 
 .language-switcher a {
